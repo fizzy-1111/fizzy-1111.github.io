@@ -1,158 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Interactive Shopping Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiny Secrets</title>
   <style>
-    /* Reset default styles */
-    * {
+    html, body {
+      height: 100%;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
-    /* Body styles */
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
     }
 
-    /* Header styles */
+    html::-webkit-scrollbar {
+    display: none;
+}
+
     header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
+      background-color: #f5cecf;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .logo {
-      height: 40px;
-    }
-
-    nav ul {
-      list-style-type: none;
+    nav {
       display: flex;
-    }
-
-    nav li {
-      margin-left: 20px;
+      gap: 1rem;
     }
 
     nav a {
-      color: #fff;
       text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 24px;
     }
 
-    /* Main content styles */
-    .hero {
-      background-image: url("https://via.placeholder.com/1200x400");
-      background-size: cover;
-      background-position: center;
-      height: 400px;
+    .content {
+      width: 100%;
+      height: 100%;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
-    .hero h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-
-    .cta-button {
-      background-color: #ff5a5f;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      padding: 40px;
-    }
-
-    .product-card {
-      background-color: #fff;
-      border-radius: 4px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      cursor: pointer;
-    }
-
-    .product-card img {
+    .content iframe {
       width: 100%;
-      height: 200px;
-      object-fit: cover;
+      height: 100%;
+      border: none;
     }
 
-    .product-info {
-      padding: 20px;
+    #shiny-secrets-page {
+      background-image: url('ShinySecrets.png');
     }
 
-    .product-info h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
+    #marketing-page {
+      background-image: url('Marketing.png');
     }
 
-    .product-info p {
-      color: #666;
-      font-size: 16px;
-      margin-bottom: 10px;
+    #Sale-page {
+      background-image: url('Sales.png');
     }
 
-    .product-info .price {
-      font-weight: bold;
-      color: #ff5a5f;
+    footer {
+    background-color: #f5cecf;
+    max-height: 300px;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+    color: #333;
     }
+
   </style>
 </head>
 <body>
   <header>
-    <img src="https://via.placeholder.com/100x40" alt="Logo" class="logo">
-    <nav>
-      <ul>
-        <li><a href="#">Dịch Vụ Sản Hàng</a></li>
-        <li><a href="#">Đổ Chơi</a></li>
-        <li><a href="#">Đổ Gia Dụng</a></li>
-        <li><a href="#">Thời Trang</a></li>
-        <li><a href="#">Văn tài</a></li>
-      </ul>
+    <div style="font-weight: bold; display: flex; align-items: center;">
+      <img src="Logo.png" alt="Shiny Secrets" style="height: 75px; margin-right: 10px;">
+    </div>
+    <nav style="display: flex; align-items: center; height: 75px; justify-content: flex-end;">
+      <a href="#shiny-secrets-page">Home</a>
+      <a href="#marketing-page">New</a>
+      <a href="#product-gallery-page">Skincare</a>
+      <a href="#Sale-page">Make up</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>Tận Hưởng Trải Nghiệm Mua Sắm An Toàn Cùa Bạn</h1>
-      <p>0985598683</p>
-      <button class="cta-button">SHOP NOW</button>
-    </section>
+  <div id="shiny-secrets-page" class="content">
+  </div>
 
-    <section class="product-grid">
-      <div class="product-card">
-        <img src="https://via.placeholder.com/300x200" alt="Product 1">
-        <div class="product-info">
-          <h3>Sản Phẩm</h3>
-          <p>Description of Product 1</p>
-          <p class="price">$$$</p>
-        </div>
-      </div>
-      <!-- Add more product cards as needed -->
-    </section>
-  </main>
+  <div id="marketing-page" class="content">
+  </div>
+
+  <div id="product-gallery-page" class="content">
+    <iframe src="product-gallery.html"></iframe>
+  </div>
+
+  <div id="Sale-page" class="content">
+  </div>
+
+  <footer>
+    <a ><b>Shiny Secrets</b> - Beauty with no reason, because you deserve to be loved!</a>
+    <a ><b>Store Location</b>: 56 100, Hồ Tùng Mậu, Cầu Giấy, Hà Nội</a>
+    <a ><b>Contact</b>: 19004455</a>
+  </footer>
 </body>
 </html>
