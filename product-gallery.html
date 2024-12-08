@@ -18,7 +18,7 @@
 
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 2rem;
       max-width: 1200px;
       margin: 2rem auto;
@@ -30,11 +30,13 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
+      overflow: hidden;
     }
 
     .product img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
+      object-fit: contain;
     }
 
     .product h3 {
@@ -69,8 +71,8 @@
       <p>✨✨✨✨</p>
     </div>
     <div class="product">
-      <img src="Maybelineipstick.png" alt="Maybelineipstick">
-      <h3>Maybelineipstick</h3>
+      <img src="Maybelineipstick.png" alt="Maybeline Lipstick">
+      <h3>Maybeline Lipstick</h3>
       <p>500.000đ</p>
       <p>✨✨✨✨</p>
     </div>
